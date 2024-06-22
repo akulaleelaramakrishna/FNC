@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Classifier</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white font-bold text-xl">Fake News Classifier</div>
+            <!-- You can add navigation links here if needed -->
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-8 px-4">
+
+        <!-- Section: CountVectorizer -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">CountVectorizer Approach</h2>
+            <p class="mb-2">1. Taking data from Kaggle with 20800 data points</p>
+            <p class="mb-2">2. Preprocessing: Remove special characters, stop words, and convert to lowercase</p>
+            <p class="mb-2">3. Use bag of words method with 5000 max features and 3-word n-grams</p>
+            <p class="mb-2">4. Train-test split with 33% test size</p>
+            <p class="mb-2">5. Train seven different ML algorithms</p>
+        </section>
+
+        <!-- Section: TF-IDF -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">TF-IDF Approach</h2>
+            <p class="mb-2">1. Use train (20800 data) and test (5200 data) from Kaggle</p>
+            <p class="mb-2">2. Preprocessing: Create features from News Title, Whole News, and News Author</p>
+            <p class="mb-2">3. Use TF-IDF transformer for feature matrix</p>
+            <p class="mb-2">4. Default train-test split</p>
+            <p class="mb-2">5. Train six different ML algorithms</p>
+        </section>
+
+        <!-- Section: LSTM -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">LSTM Approach</h2>
+            <p class="mb-2">A sequential deep learning model using LSTM architecture for binary text classification</p>
+            <p class="mb-2">Dataset size: 20800</p>
+            <p class="mb-2">Pretrained GloVe text embedding used for vectorization</p>
+            <p class="mb-2">Achieved around 99% accuracy</p>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Fake News Classifier. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
